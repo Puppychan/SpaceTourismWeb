@@ -90,6 +90,7 @@
         color: var(--nav-font-color);
         text-transform: uppercase;
         font-size: var(--nav-element-size);
+        letter-spacing: 2.5px;
     }
 
     /* hamburger */
@@ -112,7 +113,7 @@
         position: absolute;
         left: 5em;
 
-        width: 35%;
+        width: 41%;
         height: 2%;
         background-color: rgba(182, 179, 179, 0.5);
         border-radius: 7px;
@@ -121,10 +122,10 @@
 
     /* nav */
     .header-nav {
-        width: 65%;
+        width: 57%;
         padding: 0 0 0 7em;
         justify-content: flex-start;
-        gap: 3em;
+        gap: 3.3em;
         counter-reset: section -1;
     }
     .header-nav-element::before {
