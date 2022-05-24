@@ -4,11 +4,9 @@
     margin: 0;
 }
 @media screen and (min-width: 320px){
-    html {
-        min-height: 100vh;
-    }
     body {
         background: url("../assets/home/background-home-mobile.jpg") center / cover no-repeat;
+        height: 100vh;
     }
     /* main */
     main {
