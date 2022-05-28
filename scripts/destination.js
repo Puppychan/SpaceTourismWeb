@@ -27,7 +27,6 @@ async function getArray() {
         let idx = findIndexBaseOnName(link.substring(link.lastIndexOf("-") + 1, link.lastIndexOf(".")));
 
         
-        // document.querySelector("body").style.backgroundImage = `url("${arr[idx]["images"]["webp"]}")`;
         let elements = `
         <main class="flex-center">
             <div class="main-btn-wrap flex-center">
@@ -42,7 +41,7 @@ async function getArray() {
             </div>
     
         </main>`;
-        document.querySelector("body").insertAdjacentHTML("beforeend", elements);
+        document.querySelector("body").insertAdjacentHTML("afterend", elements);
 
     }
     else {
