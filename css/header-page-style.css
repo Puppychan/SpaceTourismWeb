@@ -4,7 +4,7 @@
 
 
     --content-color: rgb(160,162,181);
-    --header-color: white;
+    --header-page-color: white;
 }
 * {
     box-sizing: border-box;
@@ -26,7 +26,7 @@
         --nav-height: 6.3em;
         --nav-background-color: rgba(8, 16, 32, 0.9);
     }
-    header {
+    .header-page {
         position: fixed;
         top: var(--nav-top);
         right: 0;
@@ -40,7 +40,7 @@
         padding: 0 1.3em;
         /* padding: calc(var(--nav-height)/2) 1.6em 0; */
     }
-    header::before {
+    .header-page::before {
         display: none;
         content: '';
         position: absolute;
@@ -58,21 +58,21 @@
     }
 
     /* logo */
-    .header-icon-wrap {
+    .header-page-icon-wrap {
 
         display: flex;
         align-items: center;
         flex-grow: 1;
     }
-    .header-icon {
+    .header-page-icon {
         width: 100%;
         max-width: 3.3em;
     }
     /* line */
-    .header-line { display: none;}
+    .header-page-line { display: none;}
 
     /* nav bar */
-    .header-nav {
+    .header-page-nav {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -95,29 +95,29 @@
         font-size: var(--nav-element-size);
         letter-spacing: 2.5px;
     }
-    .header-nav-element {
+    .header-page-nav-element {
         width: 100%;
         color: var(--nav-font-color);
         text-decoration: none;
         padding: 3em 0 3em 3em;
     }
-    .header-nav-element:hover {
+    .header-page-nav-element:hover {
         background-color: rgba(37, 64, 123, 0.4);
     }
 
-    .header-hamburger-wrap {
+    .header-page-hamburger-wrap {
         justify-self: flex-end;
         /* height: var(--nav-height); */
         width: 10%;
     }
-    .header-hamburger {
+    .header-page-hamburger {
         width: 60%;
         min-width: 2em;
         cursor: pointer;
     }
 
     /* when click hamburger */
-    header.open {
+    .header-page.open {
         /* position */
         /* for creating modal win for side bar */
         /* top: 0;
@@ -127,17 +127,17 @@
         height: 100%;
         align-items: flex-start;
     }
-    header.open::before {
+    .header-page.open::before {
         display: block;
     }
-    header.open .header-nav {
+    .header-page.open .header-page-nav {
         display: flex;
         
     }
-    header.open .header-icon-wrap {
+    .header-page.open .header-page-icon-wrap {
         height: var(--nav-height);
     }
-    header.open .header-hamburger-wrap {
+    .header-page.open .header-page-hamburger-wrap {
         z-index: 1;
         height: var(--nav-height);
     }
@@ -151,12 +151,12 @@
         --nav-height: 7em;
         --nav-top : 0em;
     }
-    header {
+    .header-page {
         height: var(--nav-height);
     }
 
     /* nav */
-    .header-nav {
+    .header-page-nav {
         width: 60%;
         height: 100%;
 
@@ -168,7 +168,7 @@
         box-sizing: content-box;
         padding: 0 2em;
     }
-    .header-nav-element {
+    .header-page-nav-element {
         /* for whole block */
         height: 100%;
 
@@ -185,7 +185,7 @@
         /* for nav hover effect */
         position: relative;
     }
-    .header-nav-element:after {
+    .header-page-nav-element:after {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -197,15 +197,15 @@
         transition: width 1s;
         width: 0;
     }
-    .header-nav-element:hover {
+    .header-page-nav-element:hover {
         background-color: transparent;
     }
-    .header-nav-element:hover:after {
+    .header-page-nav-element:hover:after {
         width: 100%;
     }
 
     /* hamburger */
-    .header-hamburger {
+    .header-page-hamburger {
         display: none;
     }
 }
@@ -213,11 +213,11 @@
     :root {
         --nav-top: 1.5em;
     }
-    header {
+    .header-page {
         position: relative;
     }
     /* line */
-    .header-line {
+    .header-page-line {
         position: absolute;
         left: 6em;
         /* b/c nav has z-index is 1 */
@@ -230,19 +230,19 @@
     }
 
     /* nav */
-    .header-nav {
+    .header-page-nav {
         justify-content: flex-end;
         counter-reset: section -1;
         padding: 0em 3.6em 0em 0em;
         gap: 1.3em;
     }
-    .header-nav-element::before {
+    .header-page-nav-element::before {
         content: "0"counter(section) "";
         padding-right: 0.7em;
         font-weight: bold;
         font-size: calc(var(--nav-element-size) + 0.4rem);
     }
-    .header-nav-element {
+    .header-page-nav-element {
         counter-increment: section;
     }
 }
